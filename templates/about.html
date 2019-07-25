@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+This is a page about me.
+
+<h3>Previous Jobs:</h3>
+
+<ol>
+{% for job in previous_jobs %}
+    {% if job == "Kuhar" %}
+        <li style="color: red;">{{ job }}</li>
+    {% else %}
+        <li>{{ job }}</li>
+    {% endif %}
+{% endfor %}
+</ol>
+
+{% endblock content %}
